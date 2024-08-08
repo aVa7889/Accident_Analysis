@@ -1,7 +1,7 @@
 # Accident_Analysis
 
 ## Accident
-
+* df_drop.corr(method="spearman")['Severity']
 
 
 
