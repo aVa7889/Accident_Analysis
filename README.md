@@ -17,7 +17,7 @@
 * shared_layer1 = layers.Dense(64, activation='relu')(input_layer)
 * shared_layer2 = layers.Dense(32, activation='relu')(shared_layer1)
 * severity_output = layers.Dense(1, activation='sigmoid', name='severity_output')(shared_layer2)
-*Severity Accuracy: 0.35357803106307983
+* Severity Accuracy: 0.35357803106307983
 
 ## Accident_3
 
