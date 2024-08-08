@@ -5,6 +5,8 @@
 * X = all parameters except y (severity)
 * Y = severity
 * Y was not encoded
+* Branch Neural Network
+* 2 hidden layers
 * shared_layer1 = layers.Dense(64, activation='relu')(input_layer)
 * shared_layer2 = layers.Dense(32, activation='relu')(shared_layer1)
 * severity_output = layers.Dense(1, activation='sigmoid', name='severity_output')(shared_layer2)
@@ -16,6 +18,8 @@
 * Y was not encoded
 * df_drop.corr(method="spearman")['Severity']
 * df_drop_corr = df_drop.corr(method="spearman")['Severity']: Selected high 7 correlation parameters
+* Branch Neural Network Model
+* 2 hidden layers
 * shared_layer1 = layers.Dense(64, activation='relu')(input_layer)
 * shared_layer2 = layers.Dense(32, activation='relu')(shared_layer1)
 * severity_output = layers.Dense(1, activation='sigmoid', name='severity_output')(shared_layer2)
@@ -27,8 +31,9 @@
 * df_drop.corr(method="spearman")['Severity']
 * df_drop_corr = df_drop.corr(method="spearman")['Severity']: Selected high 7 correlation parameters
 * OneHotEncoder Y
-* Sequential model instance
+* Sequential Neural Network Model
 * nn_model = tf.keras.models.Sequential()
+* 2 hidden layers
 * nn_model.add(tf.keras.layers.Dense(units=20, activation="relu", input_dim=X.shape[1]))
 * nn_model.add(tf.keras.layers.Dense(units=10, activation="relu"))
 *  with 5 output neurons
@@ -37,5 +42,14 @@
 
 ## Accident_4
 
+* with df_drop
+* df_drop.corr(method="spearman")['Severity']
+* df_drop_corr = df_drop.corr(method="spearman")['Severity']: Selected high 7 correlation parameters
+* Categorize Y; df_drop['Severity'] = np.where(df_drop['Severity'].isin([0,1]),0,1)
+* Branch neural network model
+* 1 shared_layer
+* shared_layer1 = layers.Dense(20, activation='relu')(input_layer)
+* severity_output = layers.Dense(1, activation='sigmoid', name='severity_output')(shared_layer1)
+* Severity Accuracy: 0.6853501200675964
 
 ## Accident_5
