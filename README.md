@@ -53,3 +53,13 @@
 * Severity Accuracy: 0.6853501200675964
 
 ## Accident_5
+
+* with df_drop
+* df_drop.corr(method="spearman")['Severity']
+* df_drop_corr = df_drop.corr(method="spearman")['Severity']: Selected high 7 correlation parameters
+* Categorie Y; df_drop['Severity'] = np.where(df_drop['Severity'].isin([0,1]),0,np.where(df_drop['Severity'].isin([3,4]),2,1))
+* Branch neural network model
+* 1 shared_layer
+* shared_layer1 = layers.Dense(20, activation='relu')(input_layer)
+* severity_output = layers.Dense(1, activation='sigmoid', name='severity_output')(shared_layer1)
+* Severity Accuracy: 0.8696656227111816
