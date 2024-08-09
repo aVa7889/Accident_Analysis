@@ -88,7 +88,7 @@
 * OneHotEcoder Y; 2 output neurons
 * Sequential Neural Network Model
 * nn_model = tf.keras.models.Sequential()
-* 2 hidden layers
+* 2 hidden layers(identical accuracy with 1 hidden layer)
 * nn_model.add(tf.keras.layers.Dense(units=20, activation="relu", input_dim=X.shape[1]))
 * nn_model.add(tf.keras.layers.Dense(units=10, activation="relu"))
 * nn_model.add(tf.keras.layers.Dense(units=2, activation="softmax"))
